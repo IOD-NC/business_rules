@@ -132,13 +132,17 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "*": {
+        "before_save": "business_rules.executor.execute_rules",
+        "validate": "business_rules.executor.execute_rules",
+        "on_submit": "business_rules.executor.execute_rules"
+    },
+    "Business Rule": {
+        "on_update": "business_rules.loader.clear_cache",
+        "after_delete": "business_rules.loader.clear_cache"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
