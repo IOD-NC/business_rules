@@ -1,7 +1,7 @@
 app_name = "business_rules"
 app_title = "Business Rules"
 app_publisher = "damien raczy"
-app_description = "Business rule engine for ERPNext"
+app_description = "Business Rules engine for ERPNext"
 app_email = "damien@iod.nc"
 app_license = "mit"
 
@@ -138,7 +138,7 @@ doc_events = {
         "validate": "business_rules.executor.execute_rules",
         "on_submit": "business_rules.executor.execute_rules"
     },
-    "Business Rule": {
+    "Business Rules": {
         "on_update": "business_rules.loader.clear_cache",
         "after_delete": "business_rules.loader.clear_cache"
     }

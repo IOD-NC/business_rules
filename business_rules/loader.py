@@ -18,7 +18,7 @@ def load_active_rules(document_type: str, event: str) -> List[frappe._dict]:
     triées par priorité. [cite: 1661-1665]
     """
     rules_data = frappe.get_all(
-        "Business Rule",
+        "Business Rules",
         filters={
             "document_type": document_type,
             "event": event,
@@ -44,7 +44,7 @@ def load_active_rules(document_type: str, event: str) -> List[frappe._dict]:
 def clear_cache():
     """
     Invalide le cache de règles compilées. [cite: 1694]
-    Cette fonction est appelée par le hook on_update de Business Rule.
+    Cette fonction est appelée par le hook on_update de Business Rules.
     """
     _get_compiled_rule.cache_clear()
     frappe.log_info("Cache des règles métier vidé.", "Rule Engine")
