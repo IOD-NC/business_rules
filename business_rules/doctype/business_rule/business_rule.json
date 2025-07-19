@@ -1,6 +1,7 @@
 {
-    "doctype": "Business Rules",
-    "module": "Business Rules",
+    "doctype": "DocType",
+    "name": "Business Rule",
+    "module": "business_rules",
     "custom": false,
     "autoname": "field:rule_name",
     "fields": [

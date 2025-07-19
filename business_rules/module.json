@@ -1,0 +1,8 @@
+{
+  "app_name": "business_rules",
+  "app_title": "Business Rules",
+  "app_publisher": "Damien Raczy",
+  "app_description": "Moteur de règles conditionnelles pour Frappe",
+  "app_email": "damien@iod.nc",
+  "app_license": "MIT"
+}
